@@ -41,15 +41,14 @@ const ScrollerContainer = styled.div`
   align-items: stretch;
 `;
 
-const ScrollerContent = styled.div<{ slowed: boolean }>`
+const ScrollerContent = styled.div<{ $slowed: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  /* When not slowed: 40s; when slowed: 80s */
-  animation: ${scrollUp} ${({ slowed }) => (slowed ? "80s" : "40s")} linear
-    infinite;
+  animation: ${scrollUp} ${({ $slowed }) => ($slowed ? "60s" : "20s")} linear infinite;
 `;
+
 
 const TestimonialCard = styled.div<{
   $hovered: boolean;
@@ -110,7 +109,7 @@ const TestimonialsScroller: React.FC = () => {
         <Title>What Our Lazy Customers Say</Title>
       </Header>
       <ScrollerContainer>
-        <ScrollerContent slowed={hoveredCard !== null}>
+        <ScrollerContent $slowed={hoveredCard !== null}>
           {testimonials.map((item, idx) => (
             <TestimonialCard
               key={idx}

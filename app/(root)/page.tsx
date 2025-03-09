@@ -3,8 +3,6 @@
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
-// ...komponens logika
-// Hiba megszűnik, mert már nincs duplikált `ThemedToaster`.
 
 const Home = () => {
   const router = useRouter();
