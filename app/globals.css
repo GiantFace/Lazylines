@@ -17,6 +17,8 @@
   }
 }
 
+
+
 /* Komponens-szintű stílusok */
 @layer components {
   .container {
@@ -274,4 +276,16 @@
 .google-button img {
   width: 20px;
   height: 20px;
+}
+
+#lights {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
 }
